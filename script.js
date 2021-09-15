@@ -10,10 +10,10 @@ function getKeyByValue(object, value) {
 
 function findAnswer(e) {
   e.preventDefault();
-  answerText.textContent = '';
+  answerText.innerHTML = '';
 
   let question = questionInput.value; 
-  answerText.textContent = `${getKeyByValue(answersList, answersList[question])} - ${answersList[question]}` || 'Нет ответа';
+  answerText.innerHTML = `${getKeyByValue(answersList, answersList[question])} - <b>${answersList[question]}</b>` || 'Нет ответа';
 };
 
 const answersList = {
